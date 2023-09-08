@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Sen:wght@400;700;800&display=swap');
+
+:root {
+    --black: #030303;
+    --white: #F9F9F9;
+
+    --themisViolet: #7876E8;
+
+    --violetGradient1: #0094FF;
+    --violetGradient2: #8034DC;
+
+    --shadowGray: rgba(0,0,0,0.1);
+
+    --secondaryWhite: #E6E6E6;
+    --placeholderGray: #979797;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Sen', sans-serif;
+}
+
+body.splash {
+    background: linear-gradient(108deg, var(--violetGradient1) 0%, var(--violetGradient2) 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.box {
+    border-radius: 15px;
+    background: #ECECEC;
+    padding: 50px;
+}
+
+body.splash form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="number"],
+form input[type="date"],
+select {
+    border-radius: 5px;
+    background: var(--secondaryWhite);
+    box-shadow: 1px 1px 3px 0px var(--shadowGray) inset, 1px 2px 2px 0px var(--shadowGray);
+    border: none;
+    padding: 12px;
+}
+
+input::placeholder {
+    color: var(--placeholderGray);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: solid var(--themisViolet) 2px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button#full {
+    font-family: 'Sen', sans-serif;
+    padding: 11px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+button#full.primary {
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--violetGradient1) 0%, var(--violetGradient2) 100%);
+    transition: transform .2s;
+}
+
+button#full.primary:hover {
+    transform: scale(1.01);
+    background: linear-gradient(90deg, var(--violetGradient1) 20%, var(--violetGradient2) 100%);
+}
+
+.splash form a {
+    display: block;
+    text-align: center;
+    color: var(--themisViolet);
+    text-decoration: none;
+    font-weight: bold;
+}
