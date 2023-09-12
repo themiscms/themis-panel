@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Sen:wght@400;700;800&display=swap');
+
+:root {
+    --black: #030303;
+    --darkModeBlack: #00010E;
+    --white: #F9F9F9;
+
+    --themisViolet: #7876E8;
+
+    --violetGradient1: #0094FF;
+    --violetGradient2: #8034DC;
+
+    --shadowGray: rgba(0,0,0,0.1);
+
+    --secondaryWhite: #E6E6E6;
+    --placeholderGray: #979797;
+
+    --red1: #FB5151;
+}
+
+* {
+    color: var(--white);
+}
+
+body.fullpage {
+    background-color: var(--darkModeBlack);
+}
+
+#copy {
+    color: #292b54;
+}
+
+nav img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(73deg) brightness(114%) contrast(95%);
+}
+
+#profilebox {
+    background-color: var(--darkModeBlack);
+}
+
+#profilebox #nl img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(73deg) brightness(114%) contrast(95%);
+}
+
+#profilebox button img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(73deg) brightness(114%) contrast(95%);
+}

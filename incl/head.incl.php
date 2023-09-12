@@ -24,3 +24,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
 <link rel="stylesheet" href="../incl/panel.incl.css">
+<?php
+
+if (getSettings(sessionIdentify(session_id()))['darkmode'] == 1) {
+    echo '<link rel="stylesheet" href="../incl/dark.incl.css">';
+}
+
+?>

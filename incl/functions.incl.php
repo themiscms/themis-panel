@@ -106,7 +106,7 @@ function updateProfileSettings($id, $firstname, $lastname, $pfp) {
     DatabaseConnection()->query("UPDATE `users` SET `first_name`='" . $firstname . "',`last_name`='" . $lastname . "',`pfp`='" . $pfp . "' WHERE `user_id` = '" . $id . "' LIMIT 1;");
 }
 
-function getSettings ($user_id) {
+function getSettings($user_id) {
     $result = DatabaseConnection()->query("SELECT * FROM `settings` WHERE `user_id` = '" . $user_id . "' LIMIT 1;");
     return mysqli_fetch_array($result);
 }
@@ -145,15 +145,19 @@ function listProjects($author) {
     $result = DatabaseConnection()->query("SELECT * FROM `projects` WHERE `author` = '$author' AND `enabled` = 1 LIMIT 3");
     while ($r = mysqli_fetch_array($result)) {
         echo '
-            <a href="../edit-project?pid=' . $r["projectid"] . '">
-                <button class="project">
+            <a href="../project?pid=' . $r["projectid"] . '">
+                <button class="project" id="project">
                     <h3>' . $r["name"] . '</h3>
                     <p>' . templateCacheId($r["template"])["name"] . '</p>
+                    <br>
+                    <p>Online</p>
                 </button>
             </a>
         ';
     }
 }
+
+
 
 function updatePrivacySettings($id, $apiVisible, $showEmail, $showFirstName, $showLastName, $signTemplates) {
     DatabaseConnection()->query("UPDATE `settings` SET `apiVisible`='$apiVisible',`showEmail`='$showEmail',`showFirstName`='$showFirstName',`showLastName`='$showLastName',`signTemplates`='$signTemplates' WHERE `user_id` = '$id' LIMIT 1;");
@@ -231,10 +235,11 @@ function listElementEditFields($tid) {
 
 function formatRank($rank) {
     switch ($rank) {
-        case 'founder': return '<span style="color: #D9D9D9; font-weight: bold; font-size: 11px; padding: 3px; background-color: rgba(255,168,56,1); border-radius: 5px;">Founder</span>';
-        case 'default': return '<span style="color: #D9D9D9; font-weight: bold; font-size: 11px; padding: 3px; background-color: rgba(247,247,247,0.26); border-radius: 5px;">Default</span>';
-        case 'support': return '<span style="color: #D9D9D9; font-weight: bold; font-size: 11px; padding: 3px; background-color: rgb(22,121,246); border-radius: 5px;">Support</span>';
-        case 'admin': return '<span style="color: #D9D9D9; font-weight: bold; font-size: 11px; padding: 3px; background-color: rgb(208,77,77); border-radius: 5px;">Admin</span>';
+        case 'founder': return '<span style="color: #ffffff; font-weight: bold; font-size: 11px; padding: 3px; background-color: rgba(255,168,56,1); border-radius: 5px;">Founder</span>';
+        case 'default': return '<span style="color: #ffffff; font-weight: bold; font-size: 11px; padding: 3px; background-color: rgb(152,255,0); border-radius: 5px;">Client</span>';
+        case 'coop': return '<span style="color: #ffffff; font-weight: bold; font-size: 11px; padding: 3px; background-color: rgb(0,255,119); border-radius: 5px;">Cooperation</span>';
+        case 'support': return '<span style="color: #ffffff; font-weight: bold; font-size: 11px; padding: 3px; background-color: rgb(22,121,246); border-radius: 5px;">Support</span>';
+        case 'admin': return '<span style="color: #ffffff; font-weight: bold; font-size: 11px; padding: 3px; background-color: rgb(208,77,77); border-radius: 5px;">Admin</span>';
     }
 }
 
