@@ -45,3 +45,7 @@ nav img {
 #profilebox button img {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(73deg) brightness(114%) contrast(95%);
 }
+
+.slider {
+    background-color: #313131;
+}

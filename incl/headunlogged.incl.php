@@ -1,0 +1,1 @@
+<?php include '../incl/headglobal.incl.php'; ?>

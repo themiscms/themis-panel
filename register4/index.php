@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <title>Register to Themis panel</title>
-    <?php include '../incl/head.incl.php'; ?>
+    <?php include '../incl/headunlogged.incl.php'; ?>
 </head>
 <body class="splash">
 <div class="box">
