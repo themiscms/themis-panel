@@ -39,22 +39,24 @@ $tempAthrLN = userCacheId($tempAthr)['last_name'];
     <?php include '../incl/profilewrapper.incl.php';?>
     <section class="display">
         <?php include '../incl/nav.incl.php';?>
-        <main>
+        <main id="projectpage">
             <div id="left">
                 <div id="toolbox">
                     <h3>Toolbox</h3>
+                    <br>
                     <div class="btnrow">
                         <a href="">
-                            <button class="primary" id="small"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                    <path d="M24.9726 9.47397L18.4613 3.03014L20.6062 0.882192C21.1935 0.294064 21.9151 0 22.771 0C23.6269 0 24.348 0.294064 24.9343 0.882192L27.0792 3.03014C27.6665 3.61826 27.9729 4.32811 27.9984 5.15967C28.0239 5.99123 27.7431 6.70057 27.1558 7.28767L24.9726 9.47397ZM22.7511 11.737L6.51126 28H0V21.4795L16.2398 5.21644L22.7511 11.737Z" fill="#F9F9F9"/>
+                            <button class="primary" id="small"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M1 2.75C1 2.28587 1.18437 1.84075 1.51256 1.51256C1.84075 1.18437 2.28587 1 2.75 1H27.25C27.7141 1 28.1592 1.18437 28.4874 1.51256C28.8156 1.84075 29 2.28587 29 2.75V6.25C29 6.71413 28.8156 7.15925 28.4874 7.48744C28.1592 7.81563 27.7141 8 27.25 8H2.75C2.28587 8 1.84075 7.81563 1.51256 7.48744C1.18437 7.15925 1 6.71413 1 6.25V2.75ZM1 16.75C1 16.2859 1.18437 15.8408 1.51256 15.5126C1.84075 15.1844 2.28587 15 2.75 15H13.25C13.7141 15 14.1592 15.1844 14.4874 15.5126C14.8156 15.8408 15 16.2859 15 16.75V27.25C15 27.7141 14.8156 28.1592 14.4874 28.4874C14.1592 28.8156 13.7141 29 13.25 29H2.75C2.28587 29 1.84075 28.8156 1.51256 28.4874C1.18437 28.1592 1 27.7141 1 27.25V16.75ZM22 16.75C22 16.2859 22.1844 15.8408 22.5126 15.5126C22.8408 15.1844 23.2859 15 23.75 15H27.25C27.7141 15 28.1592 15.1844 28.4874 15.5126C28.8156 15.8408 29 16.2859 29 16.75V27.25C29 27.7141 28.8156 28.1592 28.4874 28.4874C28.1592 28.8156 27.7141 29 27.25 29H23.75C23.2859 29 22.8408 28.8156 22.5126 28.4874C22.1844 28.1592 22 27.7141 22 27.25V16.75Z" stroke="#F9F9F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg></button>
                         </a>
                         <div></div>
                         <div></div>
                         <div></div>
                         <a>
-                            <button class="primary" id="small"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                                    <path d="M1 2.75C1 2.28587 1.18437 1.84075 1.51256 1.51256C1.84075 1.18437 2.28587 1 2.75 1H27.25C27.7141 1 28.1592 1.18437 28.4874 1.51256C28.8156 1.84075 29 2.28587 29 2.75V6.25C29 6.71413 28.8156 7.15925 28.4874 7.48744C28.1592 7.81563 27.7141 8 27.25 8H2.75C2.28587 8 1.84075 7.81563 1.51256 7.48744C1.18437 7.15925 1 6.71413 1 6.25V2.75ZM1 16.75C1 16.2859 1.18437 15.8408 1.51256 15.5126C1.84075 15.1844 2.28587 15 2.75 15H13.25C13.7141 15 14.1592 15.1844 14.4874 15.5126C14.8156 15.8408 15 16.2859 15 16.75V27.25C15 27.7141 14.8156 28.1592 14.4874 28.4874C14.1592 28.8156 13.7141 29 13.25 29H2.75C2.28587 29 1.84075 28.8156 1.51256 28.4874C1.18437 28.1592 1 27.7141 1 27.25V16.75ZM22 16.75C22 16.2859 22.1844 15.8408 22.5126 15.5126C22.8408 15.1844 23.2859 15 23.75 15H27.25C27.7141 15 28.1592 15.1844 28.4874 15.5126C28.8156 15.8408 29 16.2859 29 16.75V27.25C29 27.7141 28.8156 28.1592 28.4874 28.4874C28.1592 28.8156 27.7141 29 27.25 29H23.75C23.2859 29 22.8408 28.8156 22.5126 28.4874C22.1844 28.1592 22 27.7141 22 27.25V16.75Z" stroke="#F9F9F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <button class="primary" id="small">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <path d="M24.9726 9.47397L18.4613 3.03014L20.6062 0.882192C21.1935 0.294064 21.9151 0 22.771 0C23.6269 0 24.348 0.294064 24.9343 0.882192L27.0792 3.03014C27.6665 3.61826 27.9729 4.32811 27.9984 5.15967C28.0239 5.99123 27.7431 6.70057 27.1558 7.28767L24.9726 9.47397ZM22.7511 11.737L6.51126 28H0V21.4795L16.2398 5.21644L22.7511 11.737Z" fill="#F9F9F9"/>
                                 </svg></button>
                         </a>
                         <a>
@@ -65,6 +67,7 @@ $tempAthrLN = userCacheId($tempAthr)['last_name'];
                         <a>
                             <button class="negative" id="small"><img src="../img/icons/stop.svg"></button>
                         </a>
+                        <br>
                     </div>
                 </div>
                 <div id="information">
@@ -100,6 +103,128 @@ $tempAthrLN = userCacheId($tempAthr)['last_name'];
             <div id="right">
                 <h3>Project log</h3>
                 <span>Loaded on <?= date('H:i:s d.m.Y') ?></span>
+                <div class="plog">
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                    <p id="log">
+                        <span id="time">10:59:41</span>
+                        <span id="type" class="info">[INFO]</span>
+                        <span id="cnt">Your mother has been fucked</span>
+                    </p>
+                </div>
             </div>
         </main>
     </section>

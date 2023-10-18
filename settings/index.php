@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-    <title>Homepage | Themis Panel</title>
+    <title>Settings | Themis Panel</title>
     <?php include '../incl/head.incl.php'; ?>
 </head>
 <body class="fullpage">
@@ -12,7 +12,7 @@
             <?php include '../incl/logo.incl.php'?>
         </div>
         <div class="infobar">
-            <h1>Homepage</h1>
+            <h1>Settings</h1>
             <?php include '../incl/profilebutton.incl.php'?>
         </div>
     </header>
@@ -20,19 +20,28 @@
     <section class="display">
         <?php include '../incl/nav.incl.php';?>
         <main>
-            <div class="flexdivider" style="gap: 400px">
-                <div class="flexside">
-                    <h2>Welcome to Themis!</h2>
-                    <br><br>
-                    <h3 style="color: #7876E8">What's new?</h3>
-                    <ul style="margin-left: 20px;">
-                        <?php include nl2br('../incl/changelog.incl.txt'); ?>
-                    </ul>
-                </div>
-                <div class="flexside">
-                    <img src="../img/wave.png" style="width: 300px">
-                </div>
-            </div>
+            <h3>Appearence</h3>
+            <br><br>
+            <form action="../oprs/settings.oprs.php">
+                <select name="theme">
+                    <option value="0" <?php
+
+                    if (getSettings(sessionIdentify(session_id()))['darkmode'] == 0) {
+                        echo 'selected';
+                    }
+
+                    ?>>Light</option>
+                    <option value="1" <?php
+
+                    if (getSettings(sessionIdentify(session_id()))['darkmode'] == 1) {
+                        echo 'selected';
+                    }
+
+                    ?>>Dark</option>
+                </select>
+                <br><br>
+                <button id="full" class="primary">Save</button>
+            </form>
         </main>
     </section>
 </body>

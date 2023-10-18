@@ -11,9 +11,11 @@
     --violetGradient2: #8034DC;
 
     --shadowGray: rgba(0,0,0,0.1);
+    --darkGray: rgb(47, 47, 47);
 
     --secondaryWhite: #E6E6E6;
     --placeholderGray: #979797;
+    --plogBackground: #000a1e;
 
     --red1: #FB5151;
 }
@@ -46,6 +48,31 @@ nav img {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(73deg) brightness(114%) contrast(95%);
 }
 
+.support img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(73deg) brightness(114%) contrast(95%);
+}
+
 .slider {
     background-color: #313131;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="number"],
+form input[type="date"],
+select {
+    background: var(--darkGray);
+}
+
+.projects a {
+    background-color: var(--black);
+}
+
+.projectlimit {
+    background-color: var(--darkGray);
+}
+
+#information, #toolbox, #right {
+    border: var(--darkGray) solid 2px;
 }

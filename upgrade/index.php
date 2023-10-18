@@ -26,7 +26,13 @@
         <main>
             <h1>We are glad you want to upgrade your account!</h1>
             <br>
-            <p>Sadly, premium feature is <b>not yet supported</b>.</p>
+            <?php
+
+            if (userCacheId(sessionIdentify(session_id()))['premium'] == 1) {
+                echo "<p>However you already own a premium account. There won't be any more perks when you purchase it twice :)</p>You can manage your premium account in the <a href='../billing'>billing page</a>.<p></p>";
+            } else {
+                echo '
+                <p>Sadly, premium feature is <b>not yet supported</b>.</p>
             <br><br>
             <h3>Redeem a premium gift code</h3>
             <br>
@@ -34,6 +40,11 @@
                 <input type="text" name="code" required placeholder="Your code" minlength="8" maxlength="8"><br><br>
                 <button class="primary" id="full">Redeem code</button>
             </form>
+                ';
+            }
+
+            ?>
+
         </main>
     </section>
 </body>

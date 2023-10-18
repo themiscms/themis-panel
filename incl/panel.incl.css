@@ -14,8 +14,10 @@
 
     --secondaryWhite: #E6E6E6;
     --placeholderGray: #979797;
+    --plogBackground: #ececec;
 
     --red1: #FB5151;
+    --green1: #4fff2c;
 }
 
 @keyframes slide {
@@ -94,7 +96,7 @@ select {
     box-shadow: 1px 1px 3px 0px var(--shadowGray) inset, 1px 2px 2px 0px var(--shadowGray);
     border: none;
     padding: 12px;
-    width: 253px;
+    width: 270px;
 }
 
 input::placeholder {
@@ -117,7 +119,7 @@ button#full {
     font-size: 16px;
     font-weight: bold;
     color: var(--white);
-    width: 253px;
+    width: 270px;
     box-sizing: border-box;
 }
 
@@ -276,7 +278,7 @@ main .flexdivider {
 }
 
 #profilewrapper {
-    position: absolute;
+    position: fixed;
     display: none;
     width: 100%;
     height: 100%;
@@ -310,6 +312,7 @@ main .flexdivider {
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-bottom: 20px;
 }
 
 #profilebox .profilelink {
@@ -380,7 +383,7 @@ main .flexdivider {
     box-shadow: var(--shadowGray) 1px 2px 2px 1px;
     display: inline-block;
     width: fit-content;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 50px;
 }
@@ -553,4 +556,129 @@ button#small.negative {
 
 button#small img, button#small svg {
     width: 20px;
+}
+
+p#online, p#offline {
+    font-weight: bold;
+    font-family: 'Sen', sans-serif;
+    text-transform: uppercase;
+    width: 100px;
+    text-align: center;
+    padding: 1px;
+    border-radius: 999999px;
+    color: white;
+}
+
+p#online:after {
+    content: "Online";
+}
+
+p#online {
+    background-color: var(--green1);
+}
+
+p#offline {
+    background-color: var(--red1);
+}
+
+p#offline:after {
+    content: "Offline";
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    transform: translateX(-10px);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.projectlimit {
+    width: 340px;
+    background-color: #d5d5d5;
+    height: 15px;
+    border-radius: 9999px;
+}
+
+.projectfilled {
+    background-color: var(--themisViolet);
+    height: 15px;
+    border-radius: 9999px;
+    text-align: right;
+}
+
+.projectfilled span {
+    font-weight: bold;
+    font-size: 11px;
+    color: white;
+    background-color: var(--themisViolet);
+    padding: 4px;
+    border-radius: 999px;
+}
+
+.projectflex {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+main#projectpage {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+}
+
+#projectpage #left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#information {
+    height: 100%;
+}
+
+#information, #toolbox, #right {
+    border: var(--shadowGray) solid 2px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#right {
+    width: 100%;
+}
+
+.plog {
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--plogBackground);
+    border-radius: 5px;
+    height: 440px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+#log * {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+#log #time {
+    color: var(--placeholderGray);
+}
+
+#log #type.info {
+    color: var(--themisViolet);
+}
+
+#log #cnt {
+    font-weight: normal;
 }

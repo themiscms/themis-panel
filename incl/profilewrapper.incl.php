@@ -10,7 +10,6 @@
                 <img src="../img/icons/close.svg" style="width: 10px; align-self: flex-start; border: none; background: none;">
             </button>
         </div>
-        <br>
         <a href="../profile" class="profilelink" id="nl"><img src="../img/icons/user.svg">My profile</a>
         <a href="../usersettings" class="profilelink" id="nl"><img src="../img/icons/usettings.svg">Profile settings</a>
         <a href="../privacy" class="profilelink" id="nl"><img src="../img/icons/privacy.svg">Privacy settings</a>

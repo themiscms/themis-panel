@@ -150,7 +150,7 @@ function listProjects($author) {
                     <h3>' . $r["name"] . '</h3>
                     <p>' . templateCacheId($r["template"])["name"] . '</p>
                     <br>
-                    <p>Online</p>
+                    <p id="online"></p>
                 </button>
             </a>
         ';
@@ -161,6 +161,10 @@ function listProjects($author) {
 
 function updatePrivacySettings($id, $apiVisible, $showEmail, $showFirstName, $showLastName, $signTemplates) {
     DatabaseConnection()->query("UPDATE `settings` SET `apiVisible`='$apiVisible',`showEmail`='$showEmail',`showFirstName`='$showFirstName',`showLastName`='$showLastName',`signTemplates`='$signTemplates' WHERE `user_id` = '$id' LIMIT 1;");
+}
+
+function updateThemeSetting($uid, $theme) {
+    DatabaseConnection()->query("UPDATE `settings` SET `darkmode`='$theme' WHERE `user_id` = '$uid' LIMIT 1;");
 }
 
 function listSessionsUser($user_id) {
@@ -255,4 +259,14 @@ function getElement($projectid, $element, $key) {
     $json = file_get_contents('https://api.themiscms.eu/element.php?projectid=' . config()['projectid'] . '&token=' . config()['token'] . '&element=' . $key);
     $obj = json_decode($json);
     return $obj;
+}
+
+function verifyCode($code) {
+    $result = DatabaseConnection()->query("SELECT * FROM `giftcodes` WHERE `code` = '" . $code . "' LIMIT 1;");
+    return mysqli_num_rows($result) == 1;
+}
+
+function cacheCode($code) {
+    $result = DatabaseConnection()->query("SELECT * FROM `giftcodes` WHERE `code` = '" . $code . "' LIMIT 1;");
+    return mysqli_fetch_array($result);
 }

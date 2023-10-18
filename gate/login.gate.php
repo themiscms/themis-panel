@@ -3,6 +3,6 @@
 include "../incl/functions.incl.php";
 
 if (userLogged(session_id()) < 1) {
-    header("Location: ../../?err=noLogin");
+    header("Location: ../login");
     die();
 }

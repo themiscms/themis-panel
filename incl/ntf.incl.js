@@ -16,7 +16,13 @@ if (ntfText == null) {
     switch (ntfText) {
         case 'successCodeRedeem':
             ntfTE.innerHTML = "Your Premium gift code has been redeemed.";
-            console.log("Your Premium gift code has been redeemed.");
+            break;
+        case 'noSupplyCode':
+            ntfTE.innerHTML = "Please supply a valid gift code.";
+            break;
+        case 'invalidGiftCode':
+            ntfTE.innerHTML = "The gift code you supplied is not valid.";
+            break;
     }
 }
 
